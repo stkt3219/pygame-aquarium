@@ -19,7 +19,7 @@ class RightFish(pygame.sprite.Sprite):
         self.x += random.randint(1, 2)
         if self.x > WINDOW_WIDTH:
             self.x = random.randint(-600, -100)
-            # self.y = random.randint(100, 400)
+            self.y = random.randint(100, 500)
 
     def draw(self):
         screen.blit(self.image, (self.x, self.y))
@@ -39,7 +39,7 @@ class LeftFish(pygame.sprite.Sprite):
         self.x -= random.randint(1, 2)
         if self.x < -100:
             self.x = random.randint(1100, 1500)
-            # self.y = random.randint(100, 400)
+            self.y = random.randint(100, 500)
 
     def draw(self):
         screen.blit(self.image, (self.x, self.y))
@@ -48,7 +48,7 @@ class LeftFish(pygame.sprite.Sprite):
 pygame.init()
 WINDOW_WIDTH = 1000
 WINDOW_HEIGHT = 800
-DEFAULT_IMAGE_SIZE = (120, 120)
+DEFAULT_IMAGE_SIZE = (150, 150)
 
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 mixer.music.load("indoor-fish-tank.mp3")
